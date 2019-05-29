@@ -1,6 +1,8 @@
-from haystack.backends.elasticsearch2_backend import Elasticsearch2SearchBackend
-from haystack.backends.elasticsearch2_backend import Elasticsearch2SearchEngine
-
+try:
+    from haystack.backends.elasticsearch2_backend import Elasticsearch2SearchBackend
+    from haystack.backends.elasticsearch2_backend import Elasticsearch2SearchEngine
+except ImportError:
+    raise Exception("Please install django-haystack")
 
 class IKSearchBackend(Elasticsearch2SearchBackend):
     DEFAULT_ANALYZER = "ik_max_word"

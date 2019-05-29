@@ -1,6 +1,9 @@
 import logging
 import re
-from haystack.utils.highlighting import Highlighter
+try:
+    from haystack.utils.highlighting import Highlighter
+except ImportError:
+    raise Exception("Please Install django-haystack")
 
 # from django.utils.html import strip_tags
 

@@ -1,8 +1,8 @@
+import base64
 from django.conf import settings
 from django.http import QueryDict
 from django.core.files.base import ContentFile
 from rest_framework.parsers import BaseParser
-import base64
 
 
 class Base64Parser(BaseParser):

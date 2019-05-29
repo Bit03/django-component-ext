@@ -8,7 +8,7 @@ from django.utils.html import strip_tags
 from django.utils.safestring import mark_safe
 from django.utils.translation import pgettext, ugettext as _, ungettext
 
-from app.ext.haystack.highlighting import TitleHighlighter
+from ..haystack.highlighting import TitleHighlighter
 
 register = template.Library()
 logger = logging.getLogger("django")
